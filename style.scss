@@ -1,0 +1,270 @@
+*{
+    font-family:'poppins';
+}
+@mixin flex($fd,$jc,$ai){
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+body{
+    header{
+        color: white;
+        background-color: rgb(6, 6, 175);
+        padding: 1% 0;
+        @include flex(row,space-between,center);
+        h2{
+            margin-left: 25px;
+        }
+        ul{
+            @include flex(row,space-between,center);
+            list-style-type: none;
+            li{
+                background-color:white;
+                border-radius: 10%;
+                a{
+                    text-decoration: none;
+                    color:  rgb(6, 6, 175);
+                    font-weight: bold;
+                }
+            }
+            #view{
+                padding:10px 40px;
+            }
+            #exporter{
+                padding:10px 25px;
+                margin: 0 25px;
+            }
+        }
+    }
+    .formulaire{
+        width: 90%;
+        // height: 100vh;
+        margin:5% 5%;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.185);
+        @include flex(column,space-between,center);
+        .title{
+            border-radius: 10px;
+            width:90%;
+            color:rgb(6, 6, 175);
+            @include flex(column,space-between,flex-start);
+            margin-top:4%;
+            background-color: #E0E0E0;
+            padding:2%;
+            button{
+                border: none;
+                outline: none;
+                color:white;
+                background-color:rgb(6, 6, 175);
+                border-radius: 5px;
+                margin-top:2%;
+                margin-left:98%;
+                padding:5px 10px;
+                cursor: pointer;
+                .fa{
+                    font-weight: bold;
+                    font-size: 20px;
+            }
+            }
+            input{
+                outline: none;
+                border: none;
+                background-color: #E0E0E0;
+                color:rgb(6, 6, 175);
+                border-bottom:2px solid rgb(6, 6, 175);
+                width:50%;
+            }
+            .title_flex{
+                width: 100%;
+                #WIDTH{
+                    width:70%;
+                }
+                .fa{
+                    color:rgb(6, 6, 175);
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+        }
+        .new_champ{
+            @include flex(row,space-between,center);
+            color: white;
+            background-color: rgb(6, 6, 175);
+            margin: 5%;
+            width:50%;
+            border-radius: 15px;
+            padding: 2%;
+            .add{
+                outline: none;
+                border: none;
+                background-color: white;
+                color: rgb(6, 6, 175);
+                padding:2% 4%;
+                border-radius: 10%;
+                font-weight: bold;
+            }
+        }
+        .champ_info{
+            background-color: #E0E0E0;
+            width: 80%;
+            border-radius:15px;
+            margin: 5%;
+            display: none;
+            .Head{
+                margin: 5px 15px;
+                .valid{
+                    @include flex(row,space-between,center);
+                    h3{
+                        color: rgb(6, 6, 175);
+                        font-size: 20px;
+                    }
+                    .clear{
+                        margin-left: 78%;
+                        font-weight:Medium;
+                        padding:7px 10px;
+                        font-size: 17px;
+                    }
+                    button{
+                        outline: none;
+                        border: none;
+                        color: white;
+                        font-weight: bold;
+                        padding:5px 10px;
+                        border-radius: 10px;
+                        font-size: 20px;
+                        background-color: rgb(6, 6, 175);
+                        cursor: pointer;
+                    }
+                }
+                .detail{
+                    @include flex(row,space-between,center);
+                    width: 100%;
+                    // display: inline;
+                    input{
+                        outline: none;
+                        border: none;
+                        background-color: #E0E0E0;
+                        border-bottom:2px solid rgb(6, 6, 175);
+                        width:70%;
+                        color: gray;
+                    }
+                    select{
+                        background-color:rgb(6, 6, 175);
+                        color: white;
+                        border: none;
+                        outline: none;
+                        margin-left: 15px;
+                        padding: 1%;
+                    }
+                    .Req{
+                        color: rgb(6, 6, 175);
+                        width: 20%;
+                        margin-left: 10px;
+                        align-self:flex-end;
+                        @include flex(row,center,center);
+                        input{
+                            width: 10%;
+                        }
+                    }
+                } 
+            }
+            #show_detail{
+                margin:4% 0;
+                display: none;
+                span{
+                    width: 100%;
+                    color: rgb(6, 6, 175);
+                }
+                .answers{
+                    @include flex(row,space-between,center);
+                    width: 50%;
+                    input{
+                        outline: none;
+                        color: blue;
+                        border: none;
+                        padding: 2%;
+                        border-radius: 5px;
+                        width: 80%;
+                    }
+                    .add{
+                        outline: none;
+                        border: none;
+                        background-color: white;
+                        color: rgb(6, 6, 175);
+                        padding:2% 4%;
+                        border-radius: 10%;
+                        font-weight: bold;
+                        width:12%;
+                    }
+                }
+            }
+            
+            
+        }
+    }
+    form{
+        width: 90%;
+        margin:5% 5%;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.185);
+        background-color: #E0E0E0;
+        #form{
+            margin: 2% 4%;
+            padding-top:2%;
+            padding-bottom: 2%;
+            .title_js{
+                color: white;
+                background-color:rgb(6, 6, 175);
+                border-radius: 10px;
+                padding:2px 10px ;
+                h1{
+                    align-self: center;
+                    margin-left:10px;
+                }
+                p{
+                    width: 100%;
+                    margin:10px 0;
+                    margin-left:10px;
+                }
+            }
+            .champ{
+                border-left: 10px solid rgb(6, 6, 175);
+                background-color: white;
+                border-radius: 10px;
+                padding:2px 10px ;
+                color: rgba(0, 0, 0, 0.746);
+                font-size: 20px;
+                margin-top:2%;
+               
+                h3{
+                    color: rgb(6, 6, 175);
+                    font-size: 20px;
+                }
+                .no-width{
+                    width:2%;
+                }
+                input{
+                    border: none;
+                    outline: none;
+                    border-bottom: 2px solid rgb(6, 6, 175);
+                    cursor: pointer;
+                    color: rgb(6, 6, 175);
+                    font-size: 17px;
+                    width: 60%;
+                    margin-bottom:1%;
+                }
+                select{
+                        background-color:white;
+                        color: rgb(6, 6, 175);
+                        border: none;
+                        outline: none;
+                        width: 60%;
+                        font-size: 17px;
+                        border: 1px solid rgb(6, 6, 175);
+                        margin-bottom:1%;
+                }
+            }
+        }
+    }
+}

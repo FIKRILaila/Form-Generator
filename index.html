@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h2>Form Generator</h2>
+        <ul>
+            <li id="view"><a href="#viewForm">View</a></li>
+            <li id="exporter"><a href="#">Exporter</a></li>
+        </ul>
+    </header>
+    <section class="formulaire">
+        <div class="title">
+            <h1>Enter your title:</h1>
+            <div class="title_flex">
+                <input type="text"id=titre value="">
+                <i class="fa fa-edit"></i>
+            </div>
+
+            <h2>Description:</h2>
+            <div class="title_flex">
+                <input type="text" id="WIDTH" value="">
+                <i class="fa fa-edit"></i>
+            </div>
+            <button><i class="fa fa-check"></i></button>
+
+        </div>
+        <div class="new_champ">
+            <h3>Add a new champ</h3>
+            <button class="add" onclick="addChamp()">+</button>
+        </div>
+
+
+        <div class="champ_info" id="champ_info">
+            <div class="Head">
+                <div class="valid">
+                    <h3>Title du Champ :</h3>
+                    <button onclick="Clear()" class="clear">Clear</button>
+                    <button onclick="validation()"><i class="fa fa-check"></i></button>
+                </div>
+                <div class="detail">
+                    <input type="text">
+                    <select name="type_champ" id="type_champ" onchange="show_detail()">
+                        <option value="1">--Please choose an option--</option>
+                        <option value="text">text</option>
+                        <option value="multichoice">multichoice</option>
+                        <option value="oneChoice">oneChoice</option>
+                        <option value="Select">Select</option>
+                        <option value="Password">Password</option>
+                        <option value="Phone">Phone</option>
+                        <option value="File">File</option>
+                        <option value="Number">Number</option>
+                        <option value="Email">Email</option>
+                    </select>
+
+                    <div class="Req">
+                        <label for="">is it required?</label>
+                        <input type="checkbox" id="Req" name="Req">
+                    </div>
+                </div>
+                <div id="show_detail">
+                    <span>the possible answers:</span>
+                    <div class="answers">
+                        <input type="text" name="input_answer" id="input_answer" value="" placeholder="enter your answer">
+                        <button class="add"onclick="answer()">+</button>
+                    </div>
+                    <ul id="list_answer">
+                    </ul>
+                </div>
+                
+
+            </div>
+            
+        </div>
+    </section>
+
+    <form id=viewForm>
+        <div id="form">
+        </div>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+
